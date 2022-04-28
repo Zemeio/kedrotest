@@ -51,6 +51,9 @@ myimg:
 
 outimg:
   type: PartitionedDataSet
-  dataset: kedro.extras.datasets.pillow.ImageDataSet
+  dataset:
+    type: kedro.extras.datasets.pillow.ImageDataSet
+    save_args:
+      format: "JPEG"
   path: s3://<hidden_on_purpose>/02_intermediate/
   filename_suffix: ".jpg"
